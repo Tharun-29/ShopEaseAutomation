@@ -9,8 +9,9 @@ public class OrderCreationTest extends BaseTest {
   
 	@Test
 	public void createOrder() {
-	   LoginPage logPage = new LoginPage(driver);
-	   logPage.openLoginPage();
+	   LogPage.openLoginPage();
+	   LogPage.LoginToApplication();
+	   
 	   
 	}
 	
