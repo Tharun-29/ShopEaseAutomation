@@ -35,7 +35,7 @@ public class ProductPage {
 		    }
 		}
 	
-	public void checkoutProduct() {
+	public void checkoutProducts() {
 	    CheckoutIcon.click();
 	}
 	
