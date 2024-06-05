@@ -18,11 +18,12 @@ public class BaseTest {
      
 	public WebDriver initializeDriver() {
 		ChromeOptions opt = new ChromeOptions();
+		opt.addArguments("start-maximized");
 		opt.setAcceptInsecureCerts(true);
+		opt.addArguments("incognito");
 		driver = new ChromeDriver(opt);
 		WebDriverManager.chromedriver().setup();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().window().maximize();
 		return driver;
 	}
 	

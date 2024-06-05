@@ -4,6 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="TestPack.OrderCreationTest"/>
+      <class name="TestPack.LoginFunctionality"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
