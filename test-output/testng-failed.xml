@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestPack.OrderCreationTest">
+      <class name="TestPack.LoginFunctionality">
         <methods>
           <include name="openApplication"/>
           <include name="tearDown"/>
-          <include name="createOrder"/>
+          <include name="LoginTest"/>
         </methods>
-      </class> <!-- TestPack.OrderCreationTest -->
+      </class> <!-- TestPack.LoginFunctionality -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

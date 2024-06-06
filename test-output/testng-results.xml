@@ -2,34 +2,34 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-06T00:20:46 IST" name="Suite" finished-at="2024-06-06T00:21:01 IST" duration-ms="15522">
+  <suite started-at="2024-06-06T23:05:37 IST" name="Suite" finished-at="2024-06-06T23:06:02 IST" duration-ms="24292">
     <groups>
     </groups>
-    <test started-at="2024-06-06T00:20:46 IST" name="Test" finished-at="2024-06-06T00:21:01 IST" duration-ms="15522">
+    <test started-at="2024-06-06T23:05:37 IST" name="Test" finished-at="2024-06-06T23:06:02 IST" duration-ms="24292">
       <class name="TestPack.LoginFunctionality">
-        <test-method is-config="true" signature="openApplication()[pri:0, instance:TestPack.LoginFunctionality@62379589]" started-at="2024-06-06T00:20:54 IST" name="openApplication" finished-at="2024-06-06T00:20:55 IST" duration-ms="739" status="PASS">
+        <test-method is-config="true" signature="openApplication()[pri:0, instance:TestPack.LoginFunctionality@62379589]" started-at="2024-06-06T23:05:53 IST" name="openApplication" finished-at="2024-06-06T23:05:55 IST" duration-ms="1932" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method signature="LoginTest()[pri:0, instance:TestPack.LoginFunctionality@62379589]" started-at="2024-06-06T00:20:55 IST" name="LoginTest" finished-at="2024-06-06T00:20:56 IST" duration-ms="836" status="PASS">
+        <test-method signature="LoginTest()[pri:0, instance:TestPack.LoginFunctionality@62379589]" started-at="2024-06-06T23:05:55 IST" name="LoginTest" finished-at="2024-06-06T23:05:56 IST" duration-ms="1595" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.LoginFunctionality@62379589]" started-at="2024-06-06T00:20:56 IST" name="tearDown" finished-at="2024-06-06T00:21:01 IST" duration-ms="5158" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.LoginFunctionality@62379589]" started-at="2024-06-06T23:05:56 IST" name="tearDown" finished-at="2024-06-06T23:06:02 IST" duration-ms="5281" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestPack.LoginFunctionality -->
       <class name="TestPack.OrderCreationTest">
-        <test-method is-config="true" signature="openApplication()[pri:0, instance:TestPack.OrderCreationTest@4135c3b]" started-at="2024-06-06T00:20:46 IST" name="openApplication" finished-at="2024-06-06T00:20:47 IST" duration-ms="1751" status="PASS">
+        <test-method is-config="true" signature="openApplication()[pri:0, instance:TestPack.OrderCreationTest@4135c3b]" started-at="2024-06-06T23:05:37 IST" name="openApplication" finished-at="2024-06-06T23:05:42 IST" duration-ms="5030" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method signature="createOrder()[pri:0, instance:TestPack.OrderCreationTest@4135c3b]" started-at="2024-06-06T00:20:47 IST" name="createOrder" finished-at="2024-06-06T00:20:49 IST" duration-ms="1840" status="PASS">
+        <test-method signature="createOrder()[pri:0, instance:TestPack.OrderCreationTest@4135c3b]" started-at="2024-06-06T23:05:42 IST" name="createOrder" finished-at="2024-06-06T23:05:47 IST" duration-ms="4980" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.OrderCreationTest@4135c3b]" started-at="2024-06-06T00:20:49 IST" name="tearDown" finished-at="2024-06-06T00:20:54 IST" duration-ms="5158" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.OrderCreationTest@4135c3b]" started-at="2024-06-06T23:05:47 IST" name="tearDown" finished-at="2024-06-06T23:05:53 IST" duration-ms="5385" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
