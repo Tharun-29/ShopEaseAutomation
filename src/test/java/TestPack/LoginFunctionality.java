@@ -9,7 +9,7 @@ public class LoginFunctionality extends BaseTest {
       
 	@Test
 	public void LoginTest() {
-		LogPage.openLoginPage();
+		LogPage.OpenLoginPage();
 		LogPage.LoginToApplication();
 	}
 }

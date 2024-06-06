@@ -23,7 +23,7 @@ public class LoginPage {
 	@FindBy(id = "login-button")
 	WebElement LoginButton;
 
-	public void openLoginPage() {
+	public void OpenLoginPage() {
 		driver.get("https://www.saucedemo.com/");
 	}
 	

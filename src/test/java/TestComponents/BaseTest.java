@@ -28,7 +28,7 @@ public class BaseTest {
 	}
 	
 	@BeforeMethod(alwaysRun = true)
-	public LoginPage openApplication() {
+	public LoginPage OpenApplication() {
 		driver = initializeDriver();
 		
 		LogPage = new LoginPage(driver);
