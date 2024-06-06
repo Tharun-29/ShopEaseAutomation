@@ -22,6 +22,12 @@ public class LoginPage {
 
 	@FindBy(id = "login-button")
 	WebElement LoginButton;
+	
+	@FindBy(id = "react-burger-menu-btn")
+	WebElement menu;
+	
+	@FindBy(id = "logout_sidebar_link")
+	WebElement LogoutOption;
 
 	public void OpenLoginPage() {
 		driver.get("https://www.saucedemo.com/");
@@ -31,6 +37,11 @@ public class LoginPage {
 		Username.sendKeys("standard_user");
 		Password.sendKeys("secret_sauce");
 		LoginButton.click();
+	}
+	
+	public void LogoutFromApplication() {
+		menu.click();
+		LogoutOption.click();
 	}
 
 }

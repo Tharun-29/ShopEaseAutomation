@@ -5,6 +5,7 @@
     <classes>
       <class name="TestPack.OrderCreationTest"/>
       <class name="TestPack.LoginFunctionality"/>
+      <class name="TestPack.LogoutFunctionality"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
