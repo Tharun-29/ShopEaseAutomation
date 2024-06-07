@@ -1,15 +1,16 @@
 package PageObjects;
 
-import static org.testng.Assert.assertTrue;
+
 
 import java.util.List;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class CheckoutPage {
 	WebDriver driver;
@@ -31,9 +32,9 @@ public class CheckoutPage {
 	public void ValidateProducts() {
 		for(WebElement checkOutProduct: CheckoutProducts) {
 			if(checkOutProduct.getText().contains("Sauce Labs Bike Light") || checkOutProduct.getText().contains("Backpack")) {
-	    		assertTrue(true);
+	    		Assert.assertTrue(true);
 	    	}else {
-	    		assertTrue(false);
+	    		Assert.assertTrue(false);
 	    	}
 		}
 	}

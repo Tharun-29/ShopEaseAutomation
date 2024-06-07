@@ -1,35 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-06T23:05:37 IST" name="Suite" finished-at="2024-06-06T23:06:02 IST" duration-ms="24292">
+  <suite started-at="2024-06-07T00:16:41 IST" name="Suite" finished-at="2024-06-07T00:17:15 IST" duration-ms="33496">
     <groups>
     </groups>
-    <test started-at="2024-06-06T23:05:37 IST" name="Test" finished-at="2024-06-06T23:06:02 IST" duration-ms="24292">
+    <test started-at="2024-06-07T00:16:41 IST" name="Test" finished-at="2024-06-07T00:17:15 IST" duration-ms="33496">
       <class name="TestPack.LoginFunctionality">
-        <test-method is-config="true" signature="openApplication()[pri:0, instance:TestPack.LoginFunctionality@62379589]" started-at="2024-06-06T23:05:53 IST" name="openApplication" finished-at="2024-06-06T23:05:55 IST" duration-ms="1932" status="PASS">
+        <test-method is-config="true" signature="OpenApplication()[pri:0, instance:TestPack.LoginFunctionality@175c2241]" started-at="2024-06-07T00:16:57 IST" name="OpenApplication" finished-at="2024-06-07T00:16:59 IST" duration-ms="1765" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openApplication -->
-        <test-method signature="LoginTest()[pri:0, instance:TestPack.LoginFunctionality@62379589]" started-at="2024-06-06T23:05:55 IST" name="LoginTest" finished-at="2024-06-06T23:05:56 IST" duration-ms="1595" status="PASS">
+        </test-method> <!-- OpenApplication -->
+        <test-method signature="LoginTest()[pri:0, instance:TestPack.LoginFunctionality@175c2241]" started-at="2024-06-07T00:16:59 IST" name="LoginTest" finished-at="2024-06-07T00:17:00 IST" duration-ms="1688" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.LoginFunctionality@62379589]" started-at="2024-06-06T23:05:56 IST" name="tearDown" finished-at="2024-06-06T23:06:02 IST" duration-ms="5281" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.LoginFunctionality@175c2241]" started-at="2024-06-07T00:17:00 IST" name="tearDown" finished-at="2024-06-07T00:17:06 IST" duration-ms="5244" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestPack.LoginFunctionality -->
-      <class name="TestPack.OrderCreationTest">
-        <test-method is-config="true" signature="openApplication()[pri:0, instance:TestPack.OrderCreationTest@4135c3b]" started-at="2024-06-06T23:05:37 IST" name="openApplication" finished-at="2024-06-06T23:05:42 IST" duration-ms="5030" status="PASS">
+      <class name="TestPack.LogoutFunctionality">
+        <test-method is-config="true" signature="OpenApplication()[pri:0, instance:TestPack.LogoutFunctionality@5bf0d49]" started-at="2024-06-07T00:17:06 IST" name="OpenApplication" finished-at="2024-06-07T00:17:07 IST" duration-ms="1750" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openApplication -->
-        <test-method signature="createOrder()[pri:0, instance:TestPack.OrderCreationTest@4135c3b]" started-at="2024-06-06T23:05:42 IST" name="createOrder" finished-at="2024-06-06T23:05:47 IST" duration-ms="4980" status="PASS">
+        </test-method> <!-- OpenApplication -->
+        <test-method signature="LogoutTest()[pri:0, instance:TestPack.LogoutFunctionality@5bf0d49]" started-at="2024-06-07T00:17:07 IST" name="LogoutTest" finished-at="2024-06-07T00:17:09 IST" duration-ms="2088" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogoutTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.LogoutFunctionality@5bf0d49]" started-at="2024-06-07T00:17:09 IST" name="tearDown" finished-at="2024-06-07T00:17:15 IST" duration-ms="5265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestPack.LogoutFunctionality -->
+      <class name="TestPack.OrderCreationTest">
+        <test-method is-config="true" signature="OpenApplication()[pri:0, instance:TestPack.OrderCreationTest@31304f14]" started-at="2024-06-07T00:16:41 IST" name="OpenApplication" finished-at="2024-06-07T00:16:47 IST" duration-ms="5848" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenApplication -->
+        <test-method signature="createOrder()[pri:0, instance:TestPack.OrderCreationTest@31304f14]" started-at="2024-06-07T00:16:47 IST" name="createOrder" finished-at="2024-06-07T00:16:52 IST" duration-ms="4457" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.OrderCreationTest@4135c3b]" started-at="2024-06-06T23:05:47 IST" name="tearDown" finished-at="2024-06-06T23:05:53 IST" duration-ms="5385" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.OrderCreationTest@31304f14]" started-at="2024-06-07T00:16:52 IST" name="tearDown" finished-at="2024-06-07T00:16:57 IST" duration-ms="5285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

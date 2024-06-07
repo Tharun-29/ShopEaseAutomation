@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class InformationPage {
 	WebDriver driver;
 	Actions builder;
-  
+	
 	public InformationPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);

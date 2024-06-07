@@ -1,11 +1,12 @@
 package commonutils;
 
-import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 
 public class ReuseClass {
 	public WebDriver driver;
@@ -20,7 +21,7 @@ public class ReuseClass {
 	
 	public void getHomePageName() {
 		String HomePage = HomePageName.getText();
-		assertEquals(HomePage, "Swag Labs");
+		Assert.assertEquals(HomePage, "Swag Labs");
 	}
 	 
 }
