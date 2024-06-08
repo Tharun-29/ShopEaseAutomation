@@ -39,8 +39,16 @@
 			<version>5.8.0</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.1.1</version>
+		</dependency>
+
+
 	</dependencies>
-	
+
 	<profiles>
 		<profile>
 			<id>Purchase</id>
@@ -65,7 +73,7 @@
 
 
 	</profiles>
-	
+
 
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven
