@@ -5,8 +5,8 @@
     <classes>
       <class name="TestPack.LoginFunctionality">
         <methods>
-          <include name="openApplication"/>
           <include name="tearDown"/>
+          <include name="OpenApplication"/>
           <include name="LoginTest"/>
         </methods>
       </class> <!-- TestPack.LoginFunctionality -->

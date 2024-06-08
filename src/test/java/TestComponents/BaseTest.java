@@ -14,27 +14,34 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import PageObjects.LoginPage;
+import config.ConfigReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	
 	public WebDriver driver;
 	public LoginPage LogPage;
+	public ConfigReader configReader;
      
 	public WebDriver initializeDriver() {
 		ChromeOptions opt = new ChromeOptions();
 		opt.addArguments("start-maximized");
 		opt.setAcceptInsecureCerts(true);
 		opt.addArguments("incognito");
-		driver = new ChromeDriver(opt);
 		WebDriverManager.chromedriver().setup();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver = new ChromeDriver(opt);
+		
+		int implicitWait = Integer.parseInt(configReader.getProperty("implicitWait"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
 		return driver;
 	}
 	
 	@BeforeMethod(alwaysRun = true)
 	public LoginPage OpenApplication() {
+		configReader = new ConfigReader();
 		driver = initializeDriver();
+		driver.get(configReader.getProperty("baseURL"));
+		
 		
 		LogPage = new LoginPage(driver);
 		return LogPage;
@@ -43,9 +50,10 @@ public class BaseTest {
 	@AfterMethod
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(5000);
-		driver.quit();
+		if (driver != null) {
+			driver.quit();
+		}
 	}
-	
 	
 	
 

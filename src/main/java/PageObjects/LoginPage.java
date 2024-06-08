@@ -28,14 +28,17 @@ public class LoginPage {
 	
 	@FindBy(id = "logout_sidebar_link")
 	WebElement LogoutOption;
+	
+	@FindBy(xpath = "//h3[@data-test=\"error\"]")
+	WebElement errorMessage;
 
-	public void OpenLoginPage() {
-		driver.get("https://www.saucedemo.com/");
+	public void OpenLoginPage(String baserURL) {
+		driver.get(baserURL);
 	}
 	
-	public void LoginToApplication() {
-		Username.sendKeys("standard_user");
-		Password.sendKeys("secret_sauce");
+	public void LoginToApplication(String username, String password) {
+		Username.sendKeys(username);
+		Password.sendKeys(password);
 		LoginButton.click();
 	}
 	
@@ -43,5 +46,9 @@ public class LoginPage {
 		menu.click();
 		LogoutOption.click();
 	}
+	
+	public String getErrorMessage() {
+        return errorMessage.getText();
+    }
 
 }

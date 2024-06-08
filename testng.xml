@@ -9,6 +9,7 @@
       <class name="TestPack.OrderCreationTest"/>
       <class name="TestPack.LoginFunctionality"/>
       <class name="TestPack.LogoutFunctionality"/>
+      <class name="TestPack.InvalidLoginTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,49 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-07T00:16:41 IST" name="Suite" finished-at="2024-06-07T00:17:15 IST" duration-ms="33496">
+  <suite started-at="2024-06-08T23:53:20 IST" name="Suite" finished-at="2024-06-08T23:53:51 IST" duration-ms="30694">
     <groups>
     </groups>
-    <test started-at="2024-06-07T00:16:41 IST" name="Test" finished-at="2024-06-07T00:17:15 IST" duration-ms="33496">
+    <test started-at="2024-06-08T23:53:20 IST" name="Test" finished-at="2024-06-08T23:53:51 IST" duration-ms="30694">
       <class name="TestPack.LoginFunctionality">
-        <test-method is-config="true" signature="OpenApplication()[pri:0, instance:TestPack.LoginFunctionality@175c2241]" started-at="2024-06-07T00:16:57 IST" name="OpenApplication" finished-at="2024-06-07T00:16:59 IST" duration-ms="1765" status="PASS">
+        <test-method is-config="true" signature="OpenApplication()[pri:0, instance:TestPack.LoginFunctionality@565f390]" started-at="2024-06-08T23:53:30 IST" name="OpenApplication" finished-at="2024-06-08T23:53:31 IST" duration-ms="1534" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApplication -->
-        <test-method signature="LoginTest()[pri:0, instance:TestPack.LoginFunctionality@175c2241]" started-at="2024-06-07T00:16:59 IST" name="LoginTest" finished-at="2024-06-07T00:17:00 IST" duration-ms="1688" status="PASS">
+        <test-method signature="LoginTest()[pri:0, instance:TestPack.LoginFunctionality@565f390]" started-at="2024-06-08T23:53:31 IST" name="LoginTest" finished-at="2024-06-08T23:53:32 IST" duration-ms="344" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.LoginFunctionality@175c2241]" started-at="2024-06-07T00:17:00 IST" name="tearDown" finished-at="2024-06-07T00:17:06 IST" duration-ms="5244" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.LoginFunctionality@565f390]" started-at="2024-06-08T23:53:32 IST" name="tearDown" finished-at="2024-06-08T23:53:37 IST" duration-ms="5152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestPack.LoginFunctionality -->
       <class name="TestPack.LogoutFunctionality">
-        <test-method is-config="true" signature="OpenApplication()[pri:0, instance:TestPack.LogoutFunctionality@5bf0d49]" started-at="2024-06-07T00:17:06 IST" name="OpenApplication" finished-at="2024-06-07T00:17:07 IST" duration-ms="1750" status="PASS">
+        <test-method is-config="true" signature="OpenApplication()[pri:0, instance:TestPack.LogoutFunctionality@7dc3712]" started-at="2024-06-08T23:53:37 IST" name="OpenApplication" finished-at="2024-06-08T23:53:38 IST" duration-ms="1313" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApplication -->
-        <test-method signature="LogoutTest()[pri:0, instance:TestPack.LogoutFunctionality@5bf0d49]" started-at="2024-06-07T00:17:07 IST" name="LogoutTest" finished-at="2024-06-07T00:17:09 IST" duration-ms="2088" status="PASS">
+        <test-method signature="LogoutTest()[pri:0, instance:TestPack.LogoutFunctionality@7dc3712]" started-at="2024-06-08T23:53:38 IST" name="LogoutTest" finished-at="2024-06-08T23:53:39 IST" duration-ms="586" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoutTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.LogoutFunctionality@5bf0d49]" started-at="2024-06-07T00:17:09 IST" name="tearDown" finished-at="2024-06-07T00:17:15 IST" duration-ms="5265" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.LogoutFunctionality@7dc3712]" started-at="2024-06-08T23:53:39 IST" name="tearDown" finished-at="2024-06-08T23:53:44 IST" duration-ms="5138" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestPack.LogoutFunctionality -->
-      <class name="TestPack.OrderCreationTest">
-        <test-method is-config="true" signature="OpenApplication()[pri:0, instance:TestPack.OrderCreationTest@31304f14]" started-at="2024-06-07T00:16:41 IST" name="OpenApplication" finished-at="2024-06-07T00:16:47 IST" duration-ms="5848" status="PASS">
+      <class name="TestPack.InvalidLoginTest">
+        <test-method is-config="true" signature="OpenApplication()[pri:0, instance:TestPack.InvalidLoginTest@2f67a4d3]" started-at="2024-06-08T23:53:44 IST" name="OpenApplication" finished-at="2024-06-08T23:53:45 IST" duration-ms="1300" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApplication -->
-        <test-method signature="createOrder()[pri:0, instance:TestPack.OrderCreationTest@31304f14]" started-at="2024-06-07T00:16:47 IST" name="createOrder" finished-at="2024-06-07T00:16:52 IST" duration-ms="4457" status="PASS">
+        <test-method signature="testInvalidLogin()[pri:0, instance:TestPack.InvalidLoginTest@2f67a4d3]" started-at="2024-06-08T23:53:45 IST" name="testInvalidLogin" finished-at="2024-06-08T23:53:46 IST" duration-ms="338" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Error message does not match! expected [Epic sadface: Usrname and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Error message does not match! expected [Epic sadface: Usrname and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at TestPack.InvalidLoginTest.testInvalidLogin(InvalidLoginTest.java:26)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.InvalidLoginTest@2f67a4d3]" started-at="2024-06-08T23:53:46 IST" name="tearDown" finished-at="2024-06-08T23:53:51 IST" duration-ms="5126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestPack.InvalidLoginTest -->
+      <class name="TestPack.OrderCreationTest">
+        <test-method is-config="true" signature="OpenApplication()[pri:0, instance:TestPack.OrderCreationTest@6a4f1a55]" started-at="2024-06-08T23:53:20 IST" name="OpenApplication" finished-at="2024-06-08T23:53:23 IST" duration-ms="2572" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenApplication -->
+        <test-method signature="createOrder()[pri:0, instance:TestPack.OrderCreationTest@6a4f1a55]" started-at="2024-06-08T23:53:23 IST" name="createOrder" finished-at="2024-06-08T23:53:24 IST" duration-ms="1409" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.OrderCreationTest@31304f14]" started-at="2024-06-07T00:16:52 IST" name="tearDown" finished-at="2024-06-07T00:16:57 IST" duration-ms="5285" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPack.OrderCreationTest@6a4f1a55]" started-at="2024-06-08T23:53:24 IST" name="tearDown" finished-at="2024-06-08T23:53:30 IST" duration-ms="5142" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

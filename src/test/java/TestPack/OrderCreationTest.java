@@ -14,8 +14,8 @@ public class OrderCreationTest extends BaseTest {
   
 	@Test
 	public void createOrder() {
-	   LogPage.OpenLoginPage();
-	   LogPage.LoginToApplication();
+		LogPage.OpenLoginPage(configReader.getProperty("baseURL"));
+		LogPage.LoginToApplication(configReader.getProperty("username"),configReader.getProperty("password"));
 	   
 	   ProductPage pg = new ProductPage(driver);
 	   pg.addProducts();
