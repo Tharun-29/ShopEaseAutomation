@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -126,6 +126,11 @@
                         <a href="#" panel-name="suite-Suite" title="TestPack.addProductToCartValidation" class="method navigator-link" hash-for-method="verifyProductAdditionToCart">verifyProductAdditionToCart</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestPack.removeProductToCartValidation" class="method navigator-link" hash-for-method="verifyProductRemovalfromCart">verifyProductRemovalfromCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
@@ -141,6 +146,21 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">TestPack.LoginFunctionality</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginTest">
+                  </a> <!-- LoginTest -->
+                  <span class="method-name">LoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">TestPack.LogoutFunctionality</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -149,6 +169,21 @@
                   <a name="LogoutTest">
                   </a> <!-- LogoutTest -->
                   <span class="method-name">LogoutTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestPack.OrderCreationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createOrder">
+                  </a> <!-- createOrder -->
+                  <span class="method-name">createOrder</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -186,29 +221,14 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">TestPack.OrderCreationTest</span>
+              <span class="class-name">TestPack.removeProductToCartValidation</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createOrder">
-                  </a> <!-- createOrder -->
-                  <span class="method-name">createOrder</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">TestPack.LoginFunctionality</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="LoginTest">
-                  </a> <!-- LoginTest -->
-                  <span class="method-name">LoginTest</span>
+                  <a name="verifyProductRemovalfromCart">
+                  </a> <!-- verifyProductRemovalfromCart -->
+                  <span class="method-name">verifyProductRemovalfromCart</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -228,6 +248,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;TestPack.removeProductToCartValidation&quot;/&gt;
       &lt;class name=&quot;TestPack.LoginFunctionality&quot;/&gt;
       &lt;class name=&quot;TestPack.LogoutFunctionality&quot;/&gt;
       &lt;class name=&quot;TestPack.InvalidLoginTest&quot;/&gt;
@@ -246,7 +267,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (5 classes)</span>
+                <span class="test-name">Test (6 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -272,32 +293,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createOrder')
-data.setCell(0, 2, 'TestPack.OrderCreationTest')
-data.setCell(0, 3, 1478);
+data.setCell(0, 1, 'verifyProductRemovalfromCart')
+data.setCell(0, 2, 'TestPack.removeProductToCartValidation')
+data.setCell(0, 3, 10911);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyProductAdditionToCart')
-data.setCell(1, 2, 'TestPack.addProductToCartValidation')
-data.setCell(1, 3, 806);
+data.setCell(1, 1, 'createOrder')
+data.setCell(1, 2, 'TestPack.OrderCreationTest')
+data.setCell(1, 3, 1492);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'LogoutTest')
-data.setCell(2, 2, 'TestPack.LogoutFunctionality')
-data.setCell(2, 3, 574);
+data.setCell(2, 1, 'verifyProductAdditionToCart')
+data.setCell(2, 2, 'TestPack.addProductToCartValidation')
+data.setCell(2, 3, 788);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'LoginTest')
-data.setCell(3, 2, 'TestPack.LoginFunctionality')
-data.setCell(3, 3, 337);
+data.setCell(3, 1, 'LogoutTest')
+data.setCell(3, 2, 'TestPack.LogoutFunctionality')
+data.setCell(3, 3, 516);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'testInvalidLogin')
 data.setCell(4, 2, 'TestPack.InvalidLoginTest')
-data.setCell(4, 3, 311);
+data.setCell(4, 3, 354);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'LoginTest')
+data.setCell(5, 2, 'TestPack.LoginFunctionality')
+data.setCell(5, 3, 332);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -323,78 +348,93 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestPack.LoginFunctionality</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestPack.removeProductToCartValidation</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">OpenApplication</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LoginTest</span>
-                <span class="method-start">2500 ms</span>
+                <span class="method-name">verifyProductRemovalfromCart</span>
+                <span class="method-start">2138 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">3032 ms</span>
+                <span class="method-start">13190 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestPack.LoginFunctionality</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">OpenApplication</span>
+                <span class="method-start">18361 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">LoginTest</span>
+                <span class="method-start">19768 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">20385 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestPack.LogoutFunctionality</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">OpenApplication</span>
-                <span class="method-start">8204 ms</span>
+                <span class="method-start">25513 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LogoutTest</span>
-                <span class="method-start">10343 ms</span>
+                <span class="method-start">26868 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">11086 ms</span>
+                <span class="method-start">27503 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestPack.InvalidLoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">OpenApplication</span>
-                <span class="method-start">16226 ms</span>
+                <span class="method-start">32677 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testInvalidLogin</span>
-                <span class="method-start">18180 ms</span>
+                <span class="method-start">34191 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">18633 ms</span>
+                <span class="method-start">34686 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestPack.addProductToCartValidation</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">OpenApplication</span>
-                <span class="method-start">23767 ms</span>
+                <span class="method-start">39792 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyProductAdditionToCart</span>
-                <span class="method-start">25127 ms</span>
+                <span class="method-start">41150 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">26080 ms</span>
+                <span class="method-start">42084 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestPack.OrderCreationTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">OpenApplication</span>
-                <span class="method-start">31215 ms</span>
+                <span class="method-start">47198 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createOrder</span>
-                <span class="method-start">32498 ms</span>
+                <span class="method-start">48595 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">34111 ms</span>
+                <span class="method-start">50212 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

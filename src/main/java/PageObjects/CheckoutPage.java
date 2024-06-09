@@ -1,9 +1,6 @@
 package PageObjects;
 
-
-
 import java.util.List;
-
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,37 +12,45 @@ import org.testng.Assert;
 public class CheckoutPage {
 	WebDriver driver;
 	Actions builder;
-         
+
 	public CheckoutPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		builder = new Actions(driver);
 	}
-	
-	
+
 	@FindBy(xpath = "//div[@data-test='inventory-item-name']")
 	List<WebElement> CheckoutProducts;
-	
+
 	@FindBy(id = "checkout")
 	WebElement checkoutButton;
-	
+
+	@FindBy(xpath = "//button[text()='Remove']")
+	List<WebElement> removeButton;
+
 	public void ValidateProducts(String prod) {
-		for(int i=0;i<CheckoutProducts.size();i++) {
-			if(CheckoutProducts.get(i).getText().contains(prod)) {
-	    		Assert.assertTrue(true);
-	    	}else {
-	    		Assert.assertTrue(false);
-	    	}
+		for (int i = 0; i < CheckoutProducts.size(); i++) {
+			if (CheckoutProducts.get(i).getText().contains(prod)) {
+				Assert.assertTrue(true);
+			} else {
+				Assert.assertTrue(false);
+			}
 		}
 	}
-	
-	
+
+	public void removeProduct(String prod) {
+
+		for (int i = 0; i < CheckoutProducts.size(); i++) {
+			if (CheckoutProducts.get(i).getText().contains(prod)) {
+				removeButton.get(i).click();
+			}
+		}
+	}
+
 	public void CheckoutOrder() {
 		builder.moveToElement(checkoutButton);
 		builder.click();
 		builder.perform();
 	}
-	
-	
-	
+
 }

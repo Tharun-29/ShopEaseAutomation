@@ -10,6 +10,7 @@
 			<class name="TestPack.LogoutFunctionality" />
 			<class name="TestPack.InvalidLoginTest" />
 			<class name="TestPack.addProductToCartValidation" />
+			<class name="TestPack.removeProductToCartValidation"/>
 			<class name="TestPack.OrderCreationTest" />
 		</classes>
 	</test> <!--

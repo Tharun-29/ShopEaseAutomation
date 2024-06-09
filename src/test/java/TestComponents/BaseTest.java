@@ -11,18 +11,24 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 
 import PageObjects.LoginPage;
+import Resources.ReportGeneration;
 import config.ConfigReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
-	
+
 	public WebDriver driver;
 	public LoginPage LogPage;
 	public ConfigReader configReader;
-     
+
 	public WebDriver initializeDriver() {
 		ChromeOptions opt = new ChromeOptions();
 		opt.addArguments("start-maximized");
@@ -30,23 +36,22 @@ public class BaseTest {
 		opt.addArguments("incognito");
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver(opt);
-		
+
 		int implicitWait = Integer.parseInt(configReader.getProperty("implicitWait"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
 		return driver;
 	}
-	
+
 	@BeforeMethod(alwaysRun = true)
 	public LoginPage OpenApplication() {
 		configReader = new ConfigReader();
 		driver = initializeDriver();
 		driver.get(configReader.getProperty("baseURL"));
-		
-		
+
 		LogPage = new LoginPage(driver);
 		return LogPage;
 	}
-	
+
 	@AfterMethod
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(5000);
@@ -54,8 +59,6 @@ public class BaseTest {
 			driver.quit();
 		}
 	}
-	
-	
 
 	// Screenshot Method
 	public String getScreenShot(String TestCaseName, WebDriver driver) throws IOException {
@@ -65,6 +68,5 @@ public class BaseTest {
 		FileUtils.copyFile(src, dest);
 		return System.getProperty("user.dir") + "//reports//" + TestCaseName + ".png";
 	}
-	
-	
+
 }
