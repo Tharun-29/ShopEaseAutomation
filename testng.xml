@@ -2,14 +2,17 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 	<listeners>
-		<listener class-name="TestComponents.Listeners"/>
+		<listener class-name="TestComponents.Listeners" />
 	</listeners>
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="TestPack.OrderCreationTest"/>
-      <class name="TestPack.LoginFunctionality"/>
-      <class name="TestPack.LogoutFunctionality"/>
-      <class name="TestPack.InvalidLoginTest"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="TestPack.LoginFunctionality" />
+			<class name="TestPack.LogoutFunctionality" />
+			<class name="TestPack.InvalidLoginTest" />
+			<class name="TestPack.addProductToCartValidation" />
+			<class name="TestPack.OrderCreationTest" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

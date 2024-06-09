@@ -29,9 +29,9 @@ public class CheckoutPage {
 	@FindBy(id = "checkout")
 	WebElement checkoutButton;
 	
-	public void ValidateProducts() {
-		for(WebElement checkOutProduct: CheckoutProducts) {
-			if(checkOutProduct.getText().contains("Sauce Labs Bike Light") || checkOutProduct.getText().contains("Backpack")) {
+	public void ValidateProducts(String prod) {
+		for(int i=0;i<CheckoutProducts.size();i++) {
+			if(CheckoutProducts.get(i).getText().contains(prod)) {
 	    		Assert.assertTrue(true);
 	    	}else {
 	    		Assert.assertTrue(false);

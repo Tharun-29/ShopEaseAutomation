@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestPack.InvalidLoginTest">
+      <class name="TestPack.OrderCreationTest">
         <methods>
-          <include name="testInvalidLogin"/>
           <include name="tearDown"/>
           <include name="OpenApplication"/>
+          <include name="createOrder"/>
         </methods>
-      </class> <!-- TestPack.InvalidLoginTest -->
+      </class> <!-- TestPack.OrderCreationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
