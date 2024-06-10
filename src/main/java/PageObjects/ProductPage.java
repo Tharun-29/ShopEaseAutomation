@@ -30,10 +30,8 @@ public class ProductPage {
 	
 	public void addProducts(String prod) {
 		 for(int i=0;i<Products.size();i++) {
-			 System.out.println(Products.get(i).getText());
 		    	String productName = Products.get(i).getText();
 		    	if(productName.contains(prod)) {
-		    		System.out.println(productName);
 		    		AddCartButton.get(i).click();
 		    	}
 		    }

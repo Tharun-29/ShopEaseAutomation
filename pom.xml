@@ -51,7 +51,7 @@
 
 	<profiles>
 		<profile>
-			<id>Purchase</id>
+			<id>TestPack</id>
 			<build>
 				<pluginManagement>
 					<plugins>

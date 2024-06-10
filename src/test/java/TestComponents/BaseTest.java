@@ -10,6 +10,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -30,12 +34,44 @@ public class BaseTest {
 	public ConfigReader configReader;
 
 	public WebDriver initializeDriver() {
-		ChromeOptions opt = new ChromeOptions();
-		opt.addArguments("start-maximized");
-		opt.setAcceptInsecureCerts(true);
-		opt.addArguments("incognito");
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver(opt);
+
+		String browserName = System.getProperty("browser") != null ? System.getProperty("browser")
+				: configReader.getProperty("browser");
+
+		if (browserName.contains("chrome")) {
+			ChromeOptions opt = new ChromeOptions();
+			opt.addArguments("start-maximized");
+			opt.setAcceptInsecureCerts(true);
+			opt.addArguments("incognito");
+			WebDriverManager.chromedriver().setup();
+
+			if (browserName.contains("headless")) {
+				opt.addArguments("headless");
+			}
+			driver = new ChromeDriver(opt);
+		} else if (browserName.contains("firefox")) {
+			FirefoxOptions opt = new FirefoxOptions();
+			opt.addArguments("start-maximized");
+			opt.setAcceptInsecureCerts(true);
+			opt.addArguments("incognito");
+			WebDriverManager.firefoxdriver().setup();
+
+			if (browserName.contains("headless")) {
+				opt.addArguments("headless");
+			}
+			driver = new FirefoxDriver(opt);
+		} else if (browserName.equalsIgnoreCase("edge")) {
+			EdgeOptions opt = new EdgeOptions();
+			opt.addArguments("start-maximized");
+			opt.setAcceptInsecureCerts(true);
+			opt.addArguments("incognito");
+			WebDriverManager.edgedriver().setup();
+
+			if (browserName.contains("headless")) {
+				opt.addArguments("headless");
+			}
+			driver = new EdgeDriver(opt);
+		}
 
 		int implicitWait = Integer.parseInt(configReader.getProperty("implicitWait"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
