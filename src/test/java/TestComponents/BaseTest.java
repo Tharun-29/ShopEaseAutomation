@@ -1,5 +1,6 @@
 package TestComponents;
 
+import java.awt.Dimension;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
@@ -32,34 +33,40 @@ public class BaseTest {
 	public WebDriver driver;
 	public LoginPage LogPage;
 	public ConfigReader configReader;
+	
+	// Constructor to initialize configReader
+    public BaseTest() {
+        configReader = new ConfigReader();
+    }
 
 	public WebDriver initializeDriver() {
+		
+		// Initialize configReader
+	    
 
 		String browserName = System.getProperty("browser") != null ? System.getProperty("browser")
 				: configReader.getProperty("browser");
 
 		if (browserName.contains("chrome")) {
 			ChromeOptions opt = new ChromeOptions();
-			opt.addArguments("start-maximized");
-			opt.setAcceptInsecureCerts(true);
-			opt.addArguments("incognito");
 			WebDriverManager.chromedriver().setup();
-
-			if (browserName.contains("headless")) {
-				opt.addArguments("headless");
-			}
-			driver = new ChromeDriver(opt);
-		} else if (browserName.contains("firefox")) {
-			FirefoxOptions opt = new FirefoxOptions();
 			opt.addArguments("start-maximized");
 			opt.setAcceptInsecureCerts(true);
 			opt.addArguments("incognito");
+			
+			// Check if headless mode is enabled
+		    if (browserName.contains("headless")) {
+		        opt.addArguments("headless");
+		        WebDriverManager.chromedriver().setup();
+		    }
+			
+			driver = new ChromeDriver(opt);
+			
+		} else if (browserName.equalsIgnoreCase("firefox")) {
+			//FirefoxOptions opt = new FirefoxOptions();
+			//opt.addArguments("start-maximized");
 			WebDriverManager.firefoxdriver().setup();
-
-			if (browserName.contains("headless")) {
-				opt.addArguments("headless");
-			}
-			driver = new FirefoxDriver(opt);
+			driver = new FirefoxDriver();
 		} else if (browserName.equalsIgnoreCase("edge")) {
 			EdgeOptions opt = new EdgeOptions();
 			opt.addArguments("start-maximized");
@@ -67,9 +74,6 @@ public class BaseTest {
 			opt.addArguments("incognito");
 			WebDriverManager.edgedriver().setup();
 
-			if (browserName.contains("headless")) {
-				opt.addArguments("headless");
-			}
 			driver = new EdgeDriver(opt);
 		}
 
