@@ -33,16 +33,15 @@ public class BaseTest {
 	public WebDriver driver;
 	public LoginPage LogPage;
 	public ConfigReader configReader;
-	
+
 	// Constructor to initialize configReader
-    public BaseTest() {
-        configReader = new ConfigReader();
-    }
+	public BaseTest() {
+		configReader = new ConfigReader();
+	}
 
 	public WebDriver initializeDriver() {
-		
+
 		// Initialize configReader
-	    
 
 		String browserName = System.getProperty("browser") != null ? System.getProperty("browser")
 				: configReader.getProperty("browser");
@@ -53,18 +52,18 @@ public class BaseTest {
 			opt.addArguments("start-maximized");
 			opt.setAcceptInsecureCerts(true);
 			opt.addArguments("incognito");
-			
+
 			// Check if headless mode is enabled
-		    if (browserName.contains("headless")) {
-		        opt.addArguments("headless");
-		        WebDriverManager.chromedriver().setup();
-		    }
-			
+			if (browserName.contains("headless")) {
+				opt.addArguments("headless");
+				WebDriverManager.chromedriver().setup();
+			}
+
 			driver = new ChromeDriver(opt);
-			
+
 		} else if (browserName.equalsIgnoreCase("firefox")) {
-			//FirefoxOptions opt = new FirefoxOptions();
-			//opt.addArguments("start-maximized");
+			// FirefoxOptions opt = new FirefoxOptions();
+			// opt.addArguments("start-maximized");
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		} else if (browserName.equalsIgnoreCase("edge")) {
