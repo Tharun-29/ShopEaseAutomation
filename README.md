@@ -11,6 +11,7 @@ ShopEaseAutomation is a test automation framework developed using Java, Selenium
 - **Configurable**: Properties file to manage test configurations, making the framework easily adaptable.
 - **Git and GitHub Integration**: Uses Git for version control and GitHub for repository management, ensuring efficient collaboration and code management.
 - **Jenkins Integration**: Seamless integration with Jenkins for CI/CD, ensuring tests are automatically triggered on code changes.
+  
 
 ## Test Cases
 The framework currently includes the following automated test cases:
@@ -36,7 +37,17 @@ The framework is designed to be scalable, with plans to include additional test 
 
 ### `src/main/java`
 ![image](https://github.com/Tharun-29/ShopEaseAutomation/assets/60356829/c73e042d-b97c-4097-baa0-308977df2afb)
+- **commonutils**: The commonutils package contains the Reuse class, which provides utility methods for reusable functionalities across tests.
+- **config**: The config package contains the ConfigReader class, which reads and manages configuration settings from the GlobalData.properties file.
+- **PageObjects**: The PageObjects package contains classes representing different webpages of the application, encapsulating their elements and behaviors.
+- **Resources**: The Resources package contains the ReportGeneration class for generating test reports and the GlobalData.properties file for managing global configuration properties.
 
+### `src/test/java`
+![image](https://github.com/Tharun-29/ShopEaseAutomation/assets/60356829/0a6277a3-ac38-44be-a7c3-d51f8fbdd206)
+
+- **TestComponents**: The TestComponents package contains foundational classes like BaseTest for WebDriver initialization and configuration, and Listeners for handling test events and reporting.
+
+- **TestPack**: The TestPack package contains classes for automated test cases designed to run the test and validate application functionality.
 
 ### Configuration
 - **global.properties**: Contains key-value pairs for configurations such as base URL, implicit wait time, and product names.
