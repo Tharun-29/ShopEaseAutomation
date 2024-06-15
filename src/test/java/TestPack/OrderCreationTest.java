@@ -28,9 +28,10 @@ public class OrderCreationTest extends BaseTest {
         // Step 4: Proceed to checkout
         pg.checkoutProducts();
 
-        // Step 5: Validate products in the checkout page
+        // Step 5: Validate products in the checkout page and initiate the checkout
         CheckoutPage cp = new CheckoutPage(driver);
         cp.ValidateProducts(configReader.getProperty("product1"));
+        cp.CheckoutOrder();
 
         // Step 6: Proceed with checkout by submitting user information
         InformationPage ip = new InformationPage(driver);
