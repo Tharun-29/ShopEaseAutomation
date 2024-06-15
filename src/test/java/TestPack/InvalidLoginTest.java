@@ -7,21 +7,23 @@ import TestComponents.BaseTest;
 
 public class InvalidLoginTest extends BaseTest {
 
-	@Test
-	public void testInvalidLogin() {
+    // Test method to validate invalid login scenario
+    @Test
+    public void testInvalidLogin() {
+        
+        // Read invalid credentials from properties file
+        String invalidUsername = configReader.getProperty("invalidUsername");
+        String invalidPassword = configReader.getProperty("invalidPassword");
 
-		// Read invalid credentials from properties file
-		String invalidUsername = configReader.getProperty("invalidUsername");
-		String invalidPassword = configReader.getProperty("invalidPassword");
+        // Step 1: Open the login page of the application
+        LogPage.OpenLoginPage(configReader.getProperty("baseURL"));
 
-		// Perform login with invalid credentials
-		LogPage.OpenLoginPage(configReader.getProperty("baseURL"));
-		LogPage.LoginToApplication(invalidUsername, invalidPassword);
+        // Step 2: Attempt login with invalid credentials
+        LogPage.LoginToApplication(invalidUsername, invalidPassword);
 
-		// Verify that an appropriate error message is displayed
-		String expectedErrorMessage = "Epic sadface: Username and password do not match any user in this service";
-		String actualErrorMessage = LogPage.getErrorMessage();
-		Assert.assertEquals(actualErrorMessage, expectedErrorMessage, "Error message does not match!");
-	}
-
+        // Step 3: Verify that an appropriate error message is displayed
+        String expectedErrorMessage = "Epic sadface: Username and password do not match any user in this service";
+        String actualErrorMessage = LogPage.getErrorMessage(); // Fetch the error message displayed
+        Assert.assertEquals(actualErrorMessage, expectedErrorMessage, "Error message does not match!"); // Assert that the error message matches the expected message
+    }
 }

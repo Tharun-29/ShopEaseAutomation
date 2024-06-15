@@ -12,29 +12,38 @@ import TestComponents.BaseTest;
 
 public class OrderCreationTest extends BaseTest {
 
-	@Test
-	public void createOrder() {
-		LogPage.OpenLoginPage(configReader.getProperty("baseURL"));
-		LogPage.LoginToApplication(configReader.getProperty("username"), configReader.getProperty("password"));
+    // Test method to create an order
+    @Test
+    public void createOrder() {
+        // Step 1: Open the login page of the application
+        LogPage.OpenLoginPage(configReader.getProperty("baseURL"));
 
-		ProductPage pg = new ProductPage(driver);
-		pg.addProducts(configReader.getProperty("product1"));
-		pg.checkoutProducts();
+        // Step 2: Perform login using valid credentials
+        LogPage.LoginToApplication(configReader.getProperty("username"), configReader.getProperty("password"));
 
-		CheckoutPage cp = new CheckoutPage(driver);
-		cp.ValidateProducts(configReader.getProperty("product1"));
-		cp.CheckoutOrder();
+        // Step 3: Add products to the cart
+        ProductPage pg = new ProductPage(driver);
+        pg.addProducts(configReader.getProperty("product1"));
 
-		InformationPage ip = new InformationPage(driver);
-		ip.UserInformationSubmission(configReader.getProperty("firstName"), configReader.getProperty("lastName"),
-				configReader.getProperty("postalCode"));
+        // Step 4: Proceed to checkout
+        pg.checkoutProducts();
 
-		OverviewPage op = new OverviewPage(driver);
-		op.ValidateOveriewPage(configReader.getProperty("product1"));
+        // Step 5: Validate products in the checkout page
+        CheckoutPage cp = new CheckoutPage(driver);
+        cp.ValidateProducts(configReader.getProperty("product1"));
 
-		OrderConfirmationPage ocp = new OrderConfirmationPage(driver);
-		ocp.ValidateOrderConfirmation();
+        // Step 6: Proceed with checkout by submitting user information
+        InformationPage ip = new InformationPage(driver);
+        ip.UserInformationSubmission(configReader.getProperty("firstName"), configReader.getProperty("lastName"),
+                configReader.getProperty("postalCode"));
 
-	}
+        // Step 7: Validate overview page before confirming the order
+        OverviewPage op = new OverviewPage(driver);
+        op.ValidateOveriewPage(configReader.getProperty("product1"));
+
+        // Step 8: Validate order confirmation after placing the order
+        OrderConfirmationPage ocp = new OrderConfirmationPage(driver);
+        ocp.ValidateOrderConfirmation();
+    }
 
 }
