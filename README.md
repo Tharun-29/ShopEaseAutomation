@@ -2,6 +2,11 @@
 
 ## Overview
 ShopEaseAutomation is a test automation framework developed using Java, Selenium, Maven, and Jenkins (CI/CD). This framework is designed to automate various test cases for the ShopEase (SauceDemo) application, ensuring the reliability and efficiency of the application through continuous integration and continuous delivery (CI/CD). The test results are generated using Extent Reports, providing comprehensive insights into the test execution.
+![ShopEase_Automation_TestRun](https://github.com/Tharun-29/ShopEaseAutomation/assets/60356829/f1c85818-3a50-4d7f-a878-3b37ae753083)
+![image](https://github.com/Tharun-29/ShopEaseAutomation/assets/60356829/bac7fe02-21a6-4388-9daa-92ab9a080675)
+![image](https://github.com/Tharun-29/ShopEaseAutomation/assets/60356829/0ec55292-b025-411c-8ff3-3b10cf9f906a)
+
+
 
 ## Features
 - **Automated Test Cases**: A set of predefined test cases for critical functionalities of the ShopEase application.
@@ -117,9 +122,20 @@ The framework is integrated with Jenkins to enable CI/CD. A Jenkins job is confi
 
 1. **Access the archived reports from the Jenkins job page**:
    - After the build completes, navigate to the job page and find the "Last Successful Artifacts" or "Last Completed Build" section to view the archived `report.html` file.
+  
+![image](https://github.com/Tharun-29/ShopEaseAutomation/assets/60356829/dc8af6fc-b220-4b1c-a6cf-136f241df0d2)
+![image](https://github.com/Tharun-29/ShopEaseAutomation/assets/60356829/0583da8f-b2f0-4903-825e-f5f40f2b8458)
+![image](https://github.com/Tharun-29/ShopEaseAutomation/assets/60356829/898bace0-e3e5-477c-94ba-504c6f4e12e2)
+![image](https://github.com/Tharun-29/ShopEaseAutomation/assets/60356829/af8a542d-9243-4d16-bd58-9227d429cbaf)
+![image](https://github.com/Tharun-29/ShopEaseAutomation/assets/60356829/9c0484e5-38cc-4cc7-810f-efe50badaf94)
+
+
+
+
+
 
 ## Conclusion
-The ShopEaseAutomation framework is a comprehensive solution for automating the testing of the ShopEase application. With its robust structure, detailed reporting, and CI/CD integration, it ensures that the application remains reliable and efficient. Future enhancements will expand its capabilities, providing even more coverage and reliability for the application.
+The ShopEaseAutomation framework is a comprehensive solution for automating the testing of the SauceDemo application. With its robust structure, detailed reporting, and CI/CD integration, it ensures that the application remains reliable and efficient. Future enhancements will expand its capabilities, providing even more coverage and reliability for the application.
 
 For any issues or contributions, please refer to the project's GitHub repository. Happy testing!
 
