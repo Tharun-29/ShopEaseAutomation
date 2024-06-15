@@ -34,8 +34,7 @@ public class OrderCreationTest extends BaseTest {
 
         // Step 6: Proceed with checkout by submitting user information
         InformationPage ip = new InformationPage(driver);
-        ip.UserInformationSubmission(configReader.getProperty("firstName"), configReader.getProperty("lastName"),
-                configReader.getProperty("postalCode"));
+        ip.UserInformationSubmission(configReader.getProperty("firstName"), configReader.getProperty("lastName"),configReader.getProperty("postalCode"));
 
         // Step 7: Validate overview page before confirming the order
         OverviewPage op = new OverviewPage(driver);
