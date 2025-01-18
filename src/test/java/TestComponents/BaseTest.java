@@ -40,7 +40,7 @@ public class BaseTest {
     }
 
     // Method to initialize WebDriver based on browser configuration
-    public WebDriver initializeDriver() {
+   /* public WebDriver initializeDriver() {
 
         // Read browser name from system property or config file
         String browserName = System.getProperty("browser") != null ? System.getProperty("browser")
@@ -80,6 +80,43 @@ public class BaseTest {
         int implicitWait = Integer.parseInt(configReader.getProperty("implicitWait"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait)); // Set implicit wait
         return driver;
+    } */
+
+    public WebDriver initializeDriver() {
+    String browserName = System.getProperty("browser") != null ? System.getProperty("browser")
+            : configReader.getProperty("browser");
+
+    if (browserName.contains("chrome")) {
+        ChromeOptions opt = new ChromeOptions();
+        WebDriverManager.chromedriver().setup();
+        opt.addArguments("start-maximized");
+        opt.setAcceptInsecureCerts(true);
+        opt.addArguments("incognito");
+
+        if (browserName.contains("headless")) {
+            opt.addArguments("headless");
+            opt.addArguments("--disable-dev-shm-usage");
+            opt.addArguments("--no-sandbox");
+            opt.addArguments("--disable-gpu");
+            opt.addArguments("--remote-allow-origins=*");
+        }
+
+        driver = new ChromeDriver(opt);
+    } else if (browserName.equalsIgnoreCase("firefox")) {
+        WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
+    } else if (browserName.equalsIgnoreCase("edge")) {
+        EdgeOptions opt = new EdgeOptions();
+        opt.addArguments("start-maximized");
+        opt.setAcceptInsecureCerts(true);
+        opt.addArguments("incognito");
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver(opt);
+    }
+
+    int implicitWait = Integer.parseInt(configReader.getProperty("implicitWait"));
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
+    return driver;
     }
 
     // Method executed before each test method to open the application
