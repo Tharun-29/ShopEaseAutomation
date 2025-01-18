@@ -1,0 +1,40 @@
+name: ShopEase Automation CI
+
+# When this workflow should run
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check out the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Java (use the same version as your project)
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+
+    # Step 3: Build the project with Maven
+    - name: Build the project
+      run: mvn clean install
+
+    # Step 4: Run your tests
+    - name: Run tests
+      run: mvn test
+
+    # Step 5: Save test reports
+    - name: Save Test Reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: Test-Reports
+        path: target/test-output/extent-reports/
