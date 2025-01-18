@@ -1,6 +1,5 @@
 name: ShopEase Automation CI
 
-# When this workflow should run
 on:
   push:
     branches:
@@ -14,15 +13,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Check out the repository
+    # Step 1: Checkout the repository
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Step 2: Set up Java (use the same version as your project)
+    # Step 2: Set up Java
     - name: Set up Java
       uses: actions/setup-java@v3
       with:
         java-version: '11'
+        distribution: 'temurin'  # Specify Java distribution
+        cache: 'maven'
 
     # Step 3: Build the project with Maven
     - name: Build the project
